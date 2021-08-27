@@ -1,0 +1,146 @@
+/* === Google Font ===*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: cadetblue;
+}
+
+/* === Variables Define ===*/
+:root{
+    --primary-color:#73b91d;
+    --white-color:#fff;
+    --black-color:#3C4A57; 
+    --light-gray:#E4E8EE;
+}
+
+/* === Body CSS ===*/
+body{  
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(./pics/jewelry-store-names.jpg);
+    
+}
+
+/* === Main Content CSS ===*/
+.wrapper{
+    padding:50px 25px 0;
+    max-width:668px;
+    width:100%;
+    margin:auto;
+    
+}
+.wrapper::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-image: url("images/bg-1.svg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    z-index: -1;
+}
+.wrapper .headline{
+    text-align: center;
+    padding-bottom:48px;
+}
+.wrapper .headline h1{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+}
+.wrapper .form{
+    max-width:350px;
+    width:100%;
+    margin:auto;
+}
+.wrapper .form-group{
+    margin-bottom: 15px;
+}
+.wrapper .form-group input{
+    display:block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    padding:11px 15px;
+    height:48px;
+    border-radius: 5px;
+    color:var(--black-color);
+    border:3px solid cadetblue;
+    box-shadow: none;
+    width:100%;
+}
+.wrapper .form-group input:focus{
+    outline:none;
+}
+.wrapper .form-group input::placeholder{
+    color:var(--black-color);
+    font-weight: 400;
+    font-size: 14px;
+}
+.wrapper .btn{
+    width:100%;
+    margin:15px 0 30px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    padding:12px 29px;
+    height:48px;
+    text-transform: uppercase;
+    color:var(--white-color);
+    background-color: #b93a1d;
+    border:none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+.wrapper .btn:focus{
+    outline:none;
+}
+.wrapper .account-exist{
+    color: #00070c;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 20px;
+    font-weight: inherit;
+    text-align: center;
+}
+.wrapper .account-exist a{
+    color: #b92c1d;
+    font-weight: bolder;
+}
+
+.wrapper .forget-password{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 0;
+}
+.wrapper .forget-password a{
+    color: #b92c1d;
+    font-weight: bold;
+}
+.wrapper .forget-password .check-box{
+    font-size: 15px;
+    color:black
+} 
+.signup.inActive{
+    display:none;
+}
+.signin{
+    display:none;
+}
+.signin.active{
+    display:block;
+}
+.headline span{
+    color: #b92c1d;
+}
