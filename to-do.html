@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="./to-do.css" 
+    type="text/css" media="screen" charset="utf-8">  
+        <script src="https://kit.fontawesome.com/a234f7d2d6.js" crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+    <div class="container">
+       <h2 class="headline"> We<span> keep</span> your schedule in <span>time</span></h2> 
+      <p>
+        <label for="new-task">Add Item</label><input id="new-task" type="text" shareholder="add"><button>Add</button>
+      </p>
+      
+      <h3>Todo</h3>
+      <ul id="incomplete-tasks">
+        <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">edit</button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit"><i class="fas fa-edit"></i></button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+        
+      </ul>
+      
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit"></button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
+      </ul>
+    </div>
+    <footer>created by Amanda</footer>
+
+    <script type="text/javascript" src="./to-do.js"></script>
+
+  </body>
+</html>
