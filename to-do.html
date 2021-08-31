@@ -1,34 +1,39 @@
-<html>
-  <head>
-    <title>Todo App</title>
 
-    <link rel="stylesheet" href="./to-do.css" 
-    type="text/css" media="screen" charset="utf-8">  
-        <script src="https://kit.fontawesome.com/a234f7d2d6.js" crossorigin="anonymous"></script>
-  
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous" />
+      <link rel="stylesheet" href="./to-do.css">
+      <title>To-Do List App</title>
   </head>
   <body>
-    <div class="container">
-       <h2 class="headline"> We<span> keep</span> your schedule in <span>time</span></h2> 
-      <p>
-        <label for="new-task">Add Item</label><input id="new-task" type="text" shareholder="add"><button>Add</button>
-      </p>
-      
-      <h3>Todo</h3>
-      <ul id="incomplete-tasks">
-        <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">edit</button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit"><i class="fas fa-edit"></i></button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-        
-      </ul>
-      
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit"></button><button class="delete"><i class="far fa-trash-alt"></i></button></li>
-      </ul>
-    </div>
-    <footer>created by Amanda</footer>
-
-    <script type="text/javascript" src="./to-do.js"></script>
-
+      <!-- TITLE -->
+      <header>
+          <h1>WE <span>KEEP</span> YOUR SCHEDULE IN <span>TIME</span></h1>
+      </header>
+      <!-- INPUT FIELD TO ENTER TASK AND DROPDOWN FILTER -->
+      <form>
+          <input type="text" placeholder="Enter The Work" class="todo_input" />
+          <button class="todo_button" type="submit">
+              <i class="fas fa-search-plus"></i>
+          </button>
+          <div class="select">
+              <select name="todos" class="filter_todo">
+                  <option value="all">All</option>
+                  <option value="completed">Completed</option>
+                  <option value="uncompleted">Uncompleted</option>
+              </select>
+          </div>
+      </form>
+      <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
+      <div class="todo_container">
+          <ul class="todo_list"></ul>
+      </div>
+      <!-- ADDING JAVA SCRIPT -->
+      <script src="./to-do.js"></script>
   </body>
-</html>
+  </html>
