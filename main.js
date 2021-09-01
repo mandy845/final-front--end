@@ -33,21 +33,34 @@ regForm.addEventListener("submit", e => {
     "username" :username ,
     "password" :password 
     }
-
-
+  })
 // localStorage.loggeduser= details
-console.log(details);
+// console.log(details);
+function send_email(){ 
+   fetch("https://fathomless-ravine-82823.herokuapp.com/user-registration", {
+    method: 'POST',
+    body: JSON.stringify({
+      details
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => {console.log(json)
+    fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/",{
+      method: 'POST',
+    body: JSON.stringify({
+      details
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
 
-  fetch("https://fathomless-ravine-82823.herokuapp.com/user-registration", {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json))});
+    })
+
+    .then((response) => response.json())
+    .then((json) => {console.log(json)
+    
+    })
+  };
