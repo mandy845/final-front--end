@@ -144,3 +144,6 @@ body{
 .headline span{
     color: #b92c1d;
 }
+form.signup{
+    width: 426px;
+  }

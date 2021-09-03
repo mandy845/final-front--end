@@ -14,7 +14,7 @@ btnSignUp.onclick = function(){
    signUp.classList.remove("inActive");
 }
 
-let regForm = document.querySelector(".form")
+let regForm = document.querySelector(".signup")
 
 regForm.addEventListener("submit", e => {
     e.preventDefault();
@@ -33,21 +33,44 @@ regForm.addEventListener("submit", e => {
     "username" :username ,
     "password" :password 
     }
+
+    registration(details)
   })
-// localStorage.loggeduser= details
-// console.log(details);
-function send_email(){ 
-   fetch("https://fathomless-ravine-82823.herokuapp.com/user-registration", {
+
+let logInForm = document.querySelector(".signin")
+
+logInForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    let email_adress = document.querySelector(".email_adress").value;
+    let username = document.querySelector(".username").value;
+    let password = document.querySelector(".password").value;
+    
+    console.log( email_adress, username, password);
+    let loginDetails = {
+    "email_address":email_adress,
+    "username" :username ,
+    "password" :password 
+    }
+    login(loginDetails)
+  })
+
+
+function registration(details){
+   fetch("https://fathomless-ravine-82823.herokuapp.com/user-registration/", {
     method: 'POST',
-    body: JSON.stringify({
+    body: JSON.stringify(
       details
-    }),
+    ),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
+   
     },
   })
     .then((response) => response.json())
     .then((json) => {console.log(json)
+    })}
+ function login(details){  
     fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/",{
       method: 'POST',
     body: JSON.stringify({
@@ -63,4 +86,7 @@ function send_email(){
     .then((json) => {console.log(json)
     
     })
-  };
+ }
+
+// localStorage.loggeduser= details
+// console.log(details);
