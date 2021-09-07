@@ -28,11 +28,13 @@ regForm.addEventListener("submit", e => {
     console.log(first_name, last_name, email_adress, username, password);
     let details = {
     "first_name" :first_name,
-    "last_name" :last_name ,
+    "last_name" :last_name,
     "email_address":email_adress,
-    "username" :username ,
+    "username" :username,
     "password" :password 
     }
+
+    console.log(details);
 
     registration(details)
   })
@@ -57,21 +59,32 @@ logInForm.addEventListener("submit", e => {
 
 
 function registration(details){
+
+  console.log(details);
    fetch("https://fathomless-ravine-82823.herokuapp.com/user-registration/", {
     method: 'POST',
-    body: JSON.stringify(
-      details
-    ),
+    body: JSON.stringify(details),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
-   
     },
   })
+  
     .then((response) => response.json())
     .then((json) => {console.log(json)
+
+      fetch("https://fathomless-ravine-82823.herokuapp.com/send-email/1/", {
+    method: 'GET',
+    body: details,
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+  .then((response) => response.json())
+  .then((json) => {console.log(json)
+  })
     })}
  function login(details){  
-    fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/",{
+    fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/2/",{
       method: 'POST',
     body: JSON.stringify({
       details
