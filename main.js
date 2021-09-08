@@ -54,6 +54,7 @@ logInForm.addEventListener("submit", e => {
     "username" :username ,
     "password" :password 
     }
+    console.log(loginDetails)
     login(loginDetails)
   })
 
@@ -68,26 +69,27 @@ function registration(details){
       'Content-type': 'application/json; charset=UTF-8',
     },
   })
-  
     .then((response) => response.json())
     .then((json) => {console.log(json)
 
-      fetch("https://fathomless-ravine-82823.herokuapp.com/send-email/1/", {
-    method: 'GET',
-    body: details,
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-  .then((response) => response.json())
-  .then((json) => {console.log(json)
-  })
-    })}
- function login(details){  
+    })
+
+    // fetch("https://fathomless-ravine-82823.herokuapp.com/send-email/1/", {
+    //   method: 'GET',
+    //   body: details,
+    //   headers: {
+    //     'Content-type': 'application/json; charset=UTF-8',
+    //   },
+    // })
+    // .then((response) => response.json())
+    // .then((json) => {console.log(json)
+    // })
+  }
+ function login(loginDetails){  
     fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/2/",{
-      method: 'POST',
+      method: 'GET',
     body: JSON.stringify({
-      details
+      loginDetails
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
