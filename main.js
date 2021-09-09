@@ -85,23 +85,39 @@ function registration(details){
     // .then((json) => {console.log(json)
     // })
   }
- function login(loginDetails){  
-    fetch("https://fathomless-ravine-82823.herokuapp.com/get-userlogin/2/",{
-      method: 'GET',
-    body: JSON.stringify({
-      loginDetails
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-
-    })
-
-    .then((response) => response.json())
-    .then((json) => {console.log(json)
+  function login(username,email_address,password){ 
     
-    })
- }
-
-// localStorage.loggeduser= details
-// console.log(details);
+     fetch("https://fathomless-ravine-82823.herokuapp.com/get-user-login/",{
+       
+     // body: JSON.stringify({
+     //   loginDetails
+     // }),
+     headers: {
+       'Content-type': 'application/json; charset=UTF-8',
+     },
+ 
+     })
+ 
+     .then((response) => response.json())
+     .then((data) => {
+ 
+       let users = data.data;
+       let user_found = false;
+       console.log(user_found)
+ 
+       users.forEach((user) => {
+         if (user.username == username && user.password == password) {
+           user_found = true;
+           localStorage.setItem("user", JSON.stringify(user));
+           window.location.href = "";
+           console.log(user_found);
+           // return;
+         
+       }});
+       console.log(user_found);
+       if (!user_found) {
+         alert("User not found");
+       }
+  })}
+ 
+ 
