@@ -33,7 +33,9 @@ body{
     max-width:668px;
     width:100%;
     margin:auto;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .wrapper::before{
     content:'';
@@ -150,4 +152,21 @@ form.signup{
   .btn a{
 
     text-decoration: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+      .wrapper .headline h1{
+		font-size: 15px;
+        padding-bottom: 0px;
+	};	
+    .wrapper .headline {
+        padding-bottom: 10px;
+    }
+    .form-group input {
+        width: 100px;
+    }
+    form.signup{
+        width: 390px; 
+      }
+	
   }

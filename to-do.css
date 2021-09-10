@@ -54,6 +54,8 @@ body{
 
 #week{
 	font-weight: bold;
+	display: flex;
+    align-items: center;
 }
 
 #app section{
@@ -344,4 +346,27 @@ footer{
   .flex{
 	  display: flex;
 	  justify-content: space-between;
+  }
+  .footer{
+	  color: black;
+	  background-color: black;
+  }
+  
+  @media only screen and (max-width: 600px) {
+	#app{
+		width: 100%;
+	  }	
+	  .todo_container{
+		display: block;
+	  }
+	  .todo {
+		margin: 0px;
+		width: 100%;
+		left: 0px;
+		bottom: 0px;
+	}
+	.wrapper .headline h1{
+		font-size: 15px;
+	}	
+	
   }
