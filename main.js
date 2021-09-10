@@ -74,24 +74,11 @@ function registration(details){
 
     })
 
-    // fetch("https://fathomless-ravine-82823.herokuapp.com/send-email/1/", {
-    //   method: 'GET',
-    //   body: details,
-    //   headers: {
-    //     'Content-type': 'application/json; charset=UTF-8',
-    //   },
-    // })
-    // .then((response) => response.json())
-    // .then((json) => {console.log(json)
-    // })
+   
   }
   function login(username,email_address,password){ 
-    
      fetch("https://fathomless-ravine-82823.herokuapp.com/get-user-login/",{
        
-     // body: JSON.stringify({
-     //   loginDetails
-     // }),
      headers: {
        'Content-type': 'application/json; charset=UTF-8',
      },
@@ -111,7 +98,6 @@ function registration(details){
            localStorage.setItem("user", JSON.stringify(user));
            window.location.href = "";
            console.log(user_found);
-           // return;
          
        }});
        console.log(user_found);
@@ -121,3 +107,4 @@ function registration(details){
   })}
  
  
+  

@@ -147,3 +147,7 @@ body{
 form.signup{
     width: 426px;
   }
+  .btn a{
+
+    text-decoration: none;
+  }

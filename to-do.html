@@ -11,40 +11,54 @@
       <title>To-Do List App</title>
   </head>
   <body>
-      <!-- <header>
-          <h1>WE <span>KEEP</span> YOUR SCHEDULE IN <span>TIME</span></h1>
-      </header> -->
-      <!-- INPUT FIELD TO ENTER TASK AND DROPDOWN FILTER -->
-      <div class="user"><i class="far fa-user-circle"></i></div>
-
       <section id="app">
-        <header>
-            <div id="day-field">
-                <div id="day">17</div>
-                <div id="month"><span id="month_name">NOV</span> <span id="year">2016</span></div>
-            </div>
-            <div id="week">
-                Tuesday
-            </div>
-            <div id="day-field">
-                <div id="time">00:00</div>
-                <div id="hours"><span id="minutes"></span><span id="second"></span></div>
+            <div class="flex">
+                <div id="day-field">
+                    <div id="day">17</div>
+                    <div id="month"><span id="month_name">NOV</span> <span id="year">2016</span></div>
+                </div>
+                <div id="week">
+                    Tuesday
+                </div>
+                <div id="day-field">
+                    <div id="time">00:00</div>
+                    <div id="hours"><span id="minutes"></span><span id="second"></span></div>
+                </div>
             </div>
             
-        </header>
+            <form>
+                <input type="text" placeholder="Enter your work" class="todo_input" />
+                <button class="todo_button" type="submit">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <div class="select">
+                    <select name="todos" class="filter_todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+            </form>
+            <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
+            <div class="todo_container">
+                <ul class="todo_list"></ul>
+            </div>
+        
         <section id="main_sec">
-        </section>
-        <footer>
+            
+         </section>
+       
+        <!-- <footer>
             <button id="add_but"><i class="fas fa-plus"></i></button>
-        </footer>
-
-    </section>
+            <button class="delete_btn"><i class="fas fa-trash"></i></button>
+        </footer> -->
+    </section> 
     
     
-    <div id="instructions">
+    <!-- <div id="instructions">
         <p><i class="fas fa-exclamation-circle"></i> You can rename a task.</p>
         <p>Double click to remove a task.</p>
-    </div>
+    </div> -->
       <script src="./to-do.js"></script>
   </body>
   </html>
