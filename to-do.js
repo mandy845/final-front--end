@@ -1,10 +1,10 @@
-var cont = 1;
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
-var months = ["JAN","FEB","MAR","APR", "MAY","JUN", "JUL","AUG","SEP","OCT","NOV","DEC"];
-var time = ["hours,minutes"]
+let cont = 1;
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
+let months = ["JAN","FEB","MAR","APR", "MAY","JUN", "JUL","AUG","SEP","OCT","NOV","DEC"];
+let time = ["hours,minutes"]
 window.onload = function(){
 	
-	var date = new Date();
+	let date = new Date();
 	document.getElementById('day').innerHTML = date.getDate();
 	document.getElementById('year').innerHTML = date.getFullYear();
 	document.getElementById('month_name').innerHTML = months[date.getMonth()];

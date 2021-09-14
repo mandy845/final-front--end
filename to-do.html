@@ -7,59 +7,52 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
           integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
           crossorigin="anonymous" />
+          <!-- link of css -->
       <link rel="stylesheet" href="./to-do.css">
       <title>To-Do List App</title>
   </head>
   <body>
       <section id="app">
+          <!-- date and time displayed -->
             <div class="flex">
-                <div id="day-field">
-                    <div id="day">17</div>
-                    <div id="month"><span id="month_name">NOV</span> <span id="year">2016</span></div>
-                </div>
-                <div id="week">
+            <div id="day-field">
+            <div id="day">17</div>
+            <div id="month"><span id="month_name">NOV</span> <span id="year">2016</span></div>
+           </div>
+            <div id="week">
                     Tuesday
-                </div>
-                <div id="day-field">
-                    <div id="time">00:00</div>
-                    <div id="hours"><span id="minutes"></span><span id="second"></span></div>
-                </div>
+            </div>
+            <div id="day-field">
+            <div id="time">00:00</div>
+            <div id="hours"><span id="minutes"></span><span id="second"></span></div>
+            </div>
             </div>
             
-            <form>
-                <input type="text" placeholder="Enter your work" class="todo_input" />
-                <button class="todo_button" type="submit">
+        <form>
+              <input type="text" placeholder="Enter your work" class="todo_input" />
+                 <button class="todo_button" type="submit">
                     <i class="fas fa-search-plus"></i>
-                </button>
-                <div class="select">
-                    <select name="todos" class="filter_todo">
-                        <option value="all">All</option>
-                        <option value="completed">Completed</option>
-                        <option value="uncompleted">Uncompleted</option>
-                    </select>
-                </div>
-            </form>
+                 </button>
+                 <!-- filter  -->
+            <div class="select">
+                <select name="todos" class="filter_todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
             <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
             <div class="todo_container">
                 <ul class="todo_list"></ul>
             </div>
-        
         <section id="main_sec">
-            
          </section>
-       
-        <!-- <footer>
-            <button id="add_but"><i class="fas fa-plus"></i></button>
-            <button class="delete_btn"><i class="fas fa-trash"></i></button>
-        </footer> -->
         <footer>copyright South Africa created by Amanda Makara</footer>
 
     </section> 
     
-    <!-- <div id="instructions">
-        <p><i class="fas fa-exclamation-circle"></i> You can rename a task.</p>
-        <p>Double click to remove a task.</p>
-    </div> -->
+   
       <script src="./to-do.js"></script>
   </body>
   </html>
